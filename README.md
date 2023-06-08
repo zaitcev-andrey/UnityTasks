@@ -1,2 +1,4 @@
-# UnityTasks
- This repository is destined for unity tasks
+# –абота с массивами и циклами, вывод результатов в консоль unity
+ ¬ этом проекте € выполнил несколько небольших заданий на массивы и циклы, написал сортировку выбором, 
+ а все результаты вывел в консоль unity.
+ ![ProgramImage](ProgramImage.png)
