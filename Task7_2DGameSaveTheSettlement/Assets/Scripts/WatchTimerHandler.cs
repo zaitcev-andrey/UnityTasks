@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class WatchTimerHandler : MonoBehaviour
 {
-    [SerializeField] private float _maxTime;
+    public float _maxTime;
     public bool isTick;
+    public float _currentTime;
 
-    private float _currentTime;
     private Image _sourceImage;
 
     void Start()
