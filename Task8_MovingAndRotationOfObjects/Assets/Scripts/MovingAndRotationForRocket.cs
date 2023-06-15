@@ -41,7 +41,7 @@ public class MovingAndRotationForRocket : MonoBehaviour
     }
 
     void Update()
-    {        
+    {
         _rocketTransform.Rotate(0, 0, _rotationSpeed * Time.deltaTime);
 
         _rocketTransform.position = Vector3.MoveTowards(_rocketTransform.position, _currentTarget, _movingSpeed * Time.deltaTime);
