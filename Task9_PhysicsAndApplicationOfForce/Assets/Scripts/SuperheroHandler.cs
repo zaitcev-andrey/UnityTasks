@@ -4,36 +4,11 @@ using UnityEngine;
 
 public class SuperheroHandler : MonoBehaviour
 {
-    [SerializeField] private Transform _enemy0;
-    [SerializeField] private Transform _enemy1;
-    [SerializeField] private Transform _enemy2;
-    [SerializeField] private Transform _enemy3;
-    [SerializeField] private Transform _enemy4;
-    [SerializeField] private Transform _enemy5;
-    [SerializeField] private Transform _enemy6;
-
-    [SerializeField] private Transform _friend0;
-    [SerializeField] private Transform _friend1;
-    [SerializeField] private Transform _friend2;
-    [SerializeField] private Transform _friend3;
-    [SerializeField] private Transform _friend4;
-    [SerializeField] private Transform _friend5;
-    [SerializeField] private Transform _friend6;
-    [SerializeField] private Transform _friend7;
-    [SerializeField] private Transform _friend8;
-    [SerializeField] private Transform _friend9;
-    [SerializeField] private Transform _friend10;
-    [SerializeField] private Transform _friend11;
-    [SerializeField] private Transform _friend12;
-    [SerializeField] private Transform _friend13;
-    [SerializeField] private Transform _friend14;
-    [SerializeField] private Transform _friend15;
+    [SerializeField] private Transform[] _allEnemies;
+    [SerializeField] private Transform[] _allFriends;
 
     [SerializeField] private float _superheroSpeed;
     [SerializeField] private float _strengthOfPunch;
-
-    private List<Transform> _allEnemies;
-    private List<Transform> _allFriends;
 
     private Vector3 _currentTarget;
     private int _currentEnemyIndex;
@@ -45,36 +20,6 @@ public class SuperheroHandler : MonoBehaviour
 
     void Start()
     {
-        _allEnemies = new List<Transform>()
-        {
-            _enemy0,
-            _enemy1,
-            _enemy2,
-            _enemy3,
-            _enemy4,
-            _enemy5,
-            _enemy6,
-        };
-
-        _allFriends = new List<Transform>()
-        {
-            _friend0,
-            _friend1,
-            _friend2,
-            _friend3,
-            _friend4,
-            _friend5,
-            _friend6,
-            _friend7,
-            _friend8,
-            _friend9,
-            _friend10,
-            _friend11,
-            _friend12,
-            _friend13,
-            _friend14,
-            _friend15
-        };
         _defeatedEnemies = new HashSet<GameObject>();
         _startPosition = transform.position;
 
@@ -106,7 +51,7 @@ public class SuperheroHandler : MonoBehaviour
 
     private void UpdateMovingAndLookAtOfSuperhero()
     {
-        if(!(_currentEnemyIndex == _allEnemies.Count && transform.position == _startPosition))
+        if(!(_currentEnemyIndex == _allEnemies.Length && transform.position == _startPosition))
             transform.position = Vector3.MoveTowards(transform.position, _currentTarget, _superheroSpeed * Time.deltaTime);
     }
 
@@ -122,7 +67,7 @@ public class SuperheroHandler : MonoBehaviour
             if(!_defeatedEnemies.Contains(collision.gameObject))
             {
                 _currentEnemyIndex++;
-                if (_currentEnemyIndex != _allEnemies.Count)
+                if (_currentEnemyIndex != _allEnemies.Length)
                 {
                     _currentTarget = _allEnemies[_currentEnemyIndex].position;
                 }
