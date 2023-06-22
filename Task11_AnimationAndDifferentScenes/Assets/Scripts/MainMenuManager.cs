@@ -8,5 +8,6 @@ public class MainMenuManager : MonoBehaviour
     public void ChooseSceneOnClick(int index)
     {
         SceneManager.LoadScene(index);
+        Time.timeScale = 1;
     }
 }

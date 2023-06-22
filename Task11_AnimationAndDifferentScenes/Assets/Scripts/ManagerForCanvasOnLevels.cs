@@ -14,7 +14,12 @@ public class ManagerForCanvasOnLevels : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        EscapeHandler();
+    }
+
+    public void EscapeHandler()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (_isPaused)
             {
@@ -39,10 +44,12 @@ public class ManagerForCanvasOnLevels : MonoBehaviour
     public void RestartLevelButtonOnClick()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
     }
 
     public void BackToMainMenuButtonOnClick()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
 }

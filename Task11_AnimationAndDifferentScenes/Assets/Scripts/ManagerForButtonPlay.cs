@@ -8,5 +8,6 @@ public class ManagerForButtonPlay : MonoBehaviour
     public void GoToMainMenuButtonOnClick()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
 }
