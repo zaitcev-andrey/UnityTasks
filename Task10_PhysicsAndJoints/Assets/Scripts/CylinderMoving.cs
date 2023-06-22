@@ -24,12 +24,17 @@ public class CylinderMoving : MonoBehaviour
 
     void Update()
     {
-        if(_moveToRight)
+        Moving();
+    }
+
+    private void Moving()
+    {
+        if (_moveToRight)
         {
             transform.position = Vector3.MoveTowards(transform.position, _rightEdge.position, _movingSpeed * Time.deltaTime);
-            if(transform.position.x == _maxPositionX)
+            if (transform.position.x == _maxPositionX)
                 _moveToRight = false;
-            
+
         }
         else
         {
@@ -37,6 +42,5 @@ public class CylinderMoving : MonoBehaviour
             if (transform.position.x == _minPositionX)
                 _moveToRight = true;
         }
-        
     }
 }

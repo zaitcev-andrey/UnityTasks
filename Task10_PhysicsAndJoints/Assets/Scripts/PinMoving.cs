@@ -16,10 +16,15 @@ public class PinMoving : MonoBehaviour
 
     void Update()
     {
+        Moving();
+    }
+
+    private void Moving()
+    {
         _currentTimeToHit -= Time.deltaTime;
         JointSpring spring = _hingeJoint.spring;
         if (_currentTimeToHit < 0)
-        {            
+        {
             spring.targetPosition = -90f;
             _hingeJoint.spring = spring;
             _currentTimeToHit = _timeToHit;
