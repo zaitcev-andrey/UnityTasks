@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using PlayerInputs;
+using GlobalInputVars;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
@@ -30,8 +30,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void SetMovementVector()
     {
-        _x = Input.GetAxis(PlayerInputs.GlobalStringVars.HORIZONTAL_AXIS);
-        _z = Input.GetAxis(PlayerInputs.GlobalStringVars.VERTICAL_AXIS);
+        _x = Input.GetAxis(GlobalInputVars.GlobalStringVars.HORIZONTAL_AXIS);
+        _z = Input.GetAxis(GlobalInputVars.GlobalStringVars.VERTICAL_AXIS);
         _movement = new Vector3(_x, 0, _z).normalized * _speed;
     }
     private void Movement()
