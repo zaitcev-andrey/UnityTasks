@@ -14,10 +14,15 @@ public class RandomAnimation : MonoBehaviour
         _rand = new System.Random();
     }
 
+    private void Start()
+    {
+        ChangeAnimation();
+    }
+
     public void ChangeAnimation()
     {
         int value = _rand.Next(0, 3);
-        Debug.Log(value);
+        Debug.Log($"RobotAnimation: {value}");
         _anim.SetInteger("animationId", value);
     }
 }
