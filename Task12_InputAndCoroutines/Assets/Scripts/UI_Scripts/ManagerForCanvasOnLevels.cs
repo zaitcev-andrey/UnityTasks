@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ManagerForCanvasOnLevels : MonoBehaviour
 {
-    [SerializeField] private GameObject _canvas;
+    [SerializeField] private GameObject _canvasForPause;
     private bool _isPaused = false;
+    public bool _isGameOver = false;
 
     private void Start()
     {
-        _canvas.SetActive(false);
+        _canvasForPause.SetActive(false);
     }
     void Update()
     {
@@ -19,26 +20,32 @@ public class ManagerForCanvasOnLevels : MonoBehaviour
 
     public void EscapeHandler()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (!_isGameOver)
         {
-            if (_isPaused)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                ContinueButtonOnClick();
-            }
-            else
-            {
-                _isPaused = true;
-                Time.timeScale = 0;
-                _canvas.SetActive(true);
+                if (_isPaused)
+                {
+                    Cursor.visible = false;
+                    ContinueButtonOnClick();
+                }
+                else
+                {
+                    Cursor.visible = true;
+                    _isPaused = true;
+                    Time.timeScale = 0;
+                    _canvasForPause.SetActive(true);
+                }
             }
         }
     }
 
     public void ContinueButtonOnClick()
     {
+        Cursor.visible = false;
         _isPaused = false;
         Time.timeScale = 1;
-        _canvas.SetActive(false);
+        _canvasForPause.SetActive(false);
     }
 
     public void RestartLevelButtonOnClick()

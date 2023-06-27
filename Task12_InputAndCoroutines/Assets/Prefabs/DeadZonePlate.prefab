@@ -785,6 +785,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7885677138730469226}
+  - component: {fileID: 1974312347}
+  - component: {fileID: 1974312348}
   m_Layer: 0
   m_Name: DeadZonePlate
   m_TagString: Untagged
@@ -823,6 +825,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1974312347
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7885677138730469227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9987144, y: 0.6304258, z: 1.9565973}
+  m_Center: {x: -0.0032315254, y: 0.13420394, z: 0.006987095}
+--- !u!114 &1974312348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7885677138730469227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 879b4c8b375c8804e8513b9fd7e00ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7885677138803042534
 GameObject:
   m_ObjectHideFlags: 0
