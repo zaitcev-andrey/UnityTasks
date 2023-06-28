@@ -8,6 +8,8 @@ public class ButtonOnGround : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        _gameObjectForTurnOn.SetActive(true);
+        if(_gameObjectForTurnOn.activeSelf)
+            _gameObjectForTurnOn.SetActive(false);
+        else _gameObjectForTurnOn.SetActive(true);
     }
 }

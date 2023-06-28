@@ -7,6 +7,7 @@ public class Coins
     public static Dictionary<int, int> coinsForLevels = new Dictionary<int, int>()
     {
         { 2, 4 },
-        { 3, 6 }
+        { 3, 5 },
+        { 4, 6 },
     };
 }
