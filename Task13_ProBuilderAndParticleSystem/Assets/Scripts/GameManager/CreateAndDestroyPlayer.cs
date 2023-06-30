@@ -11,7 +11,7 @@ public class CreateAndDestroyPlayer : MonoBehaviour
 
     private GameObject _player;
 
-    void Start()
+    void Awake()
     {
         _player = Instantiate(_playerPrefab, _startRespawnPointTransform.position, _startRespawnPointTransform.rotation);
     }
@@ -36,5 +36,10 @@ public class CreateAndDestroyPlayer : MonoBehaviour
     public Vector3 PlayerPosition()
     {
         return _player.transform.position;
+    }
+
+    public GameObject GetPlayer()
+    {
+        return _player;
     }
 }

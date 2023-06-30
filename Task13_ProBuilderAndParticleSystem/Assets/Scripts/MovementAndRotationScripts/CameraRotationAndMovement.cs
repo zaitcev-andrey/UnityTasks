@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class CameraRotationAndMovement : MonoBehaviour
 {
-    [SerializeField] private GameObject _player;
     [SerializeField] private Transform _pivotForCamera;
     [SerializeField] private Vector3 _distanceFromPlayer;
+
+    private CreateAndDestroyPlayer _createAndDestroyPlayer;
 
     private InputAndRotationAroundAxis _inputs;
     private Transform _playerTransform;
@@ -20,15 +21,24 @@ public class CameraRotationAndMovement : MonoBehaviour
     private void Start()
     {
         _inputs = FindObjectOfType<InputAndRotationAroundAxis>();
-        _playerTransform = _player.transform;
+        _createAndDestroyPlayer = FindObjectOfType<CreateAndDestroyPlayer>();
+        _playerTransform = _createAndDestroyPlayer.GetPlayer().transform;
     }
 
     private void Update()
     {
         CameraRotationAroundPoint();
-        if(_player.activeSelf)
+        if (_playerTransform != null)
         {
             _currentPositionOfPlayer = _playerTransform.position;
+        }
+        else
+        {
+            if (_createAndDestroyPlayer.GetPlayer() != null)
+            {
+                _playerTransform = _createAndDestroyPlayer.GetPlayer().transform;
+                _pivotForCamera.rotation = Quaternion.identity;
+            }
         }
     }
 
