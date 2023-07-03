@@ -4882,6 +4882,7 @@ GameObject:
   - component: {fileID: 1866058038099659198}
   - component: {fileID: 4006490490650484132}
   - component: {fileID: 4987266413292667515}
+  - component: {fileID: 233909604124021782}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -4952,6 +4953,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coinBurstParticleEffect: {fileID: 5088033213240848271}
+--- !u!114 &233909604124021782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866058038099659192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd66d9a99acf3a0428cb433d52fd1307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1866058038810974071
 GameObject:
   m_ObjectHideFlags: 0
