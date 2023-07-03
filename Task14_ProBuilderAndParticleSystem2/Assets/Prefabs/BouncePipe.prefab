@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 971839027874652651}
   - component: {fileID: 971839027874652650}
   m_Layer: 0
-  m_Name: Pipe
+  m_Name: BouncePipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

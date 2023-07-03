@@ -22,7 +22,6 @@ public class RandomAnimation : MonoBehaviour
     public void ChangeAnimation()
     {
         int value = _rand.Next(0, 3);
-        Debug.Log($"RobotAnimation: {value}");
         _anim.SetInteger("animationId", value);
     }
 }

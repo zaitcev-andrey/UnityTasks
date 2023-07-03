@@ -26,7 +26,7 @@ public class ManagerForWinCanvasOnLastLevel : MonoBehaviour
         _canvasForPause._isGameOver = true;
 
         _coinsText.text = $"{_levelManager.collectedCoins} / {Coins.coinsForLevels[SceneManager.GetActiveScene().buildIndex]}";
-        _timeText.text = $"{Math.Round(_levelManager.timeForLevel, 2)}";
+        _timeText.text = _levelManager.timeForLevelString;
 
         Cursor.visible = true;
         Time.timeScale = 0f;
