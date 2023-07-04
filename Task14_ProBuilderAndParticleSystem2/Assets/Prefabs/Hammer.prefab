@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8dfe986499a3f14a89680f0d8671861, type: 2}
+  - {fileID: 2100000, guid: c59a5a8b140f0c545a0446a109c171e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -159,7 +159,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8dfe986499a3f14a89680f0d8671861, type: 2}
+  - {fileID: 2100000, guid: c59a5a8b140f0c545a0446a109c171e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -256,7 +256,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 85945d7ea0c78254eb1397bad7bda927, type: 2}
+  - {fileID: 2100000, guid: c59a5a8b140f0c545a0446a109c171e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -361,7 +361,7 @@ HingeJoint:
   m_UseMotor: 1
   m_Motor:
     targetVelocity: 200
-    force: 600
+    force: 3500
     freeSpin: 0
   m_UseLimits: 0
   m_Limits:
@@ -438,7 +438,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8dfe986499a3f14a89680f0d8671861, type: 2}
+  - {fileID: 2100000, guid: c59a5a8b140f0c545a0446a109c171e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -498,7 +498,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2913058899751055114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.277, z: 0}
+  m_LocalPosition: {x: 0.67, y: 3.277, z: 1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -588,7 +588,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 286cd8b472e69554880c58a483f5f10f, type: 2}
+  - {fileID: 2100000, guid: 65bee26989f58734a9bca083e95e319f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -648,7 +648,7 @@ Transform:
   m_GameObject: {fileID: 2913058900710444026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.72, y: 0.65, z: -2.17}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4347388, y: 1.434739, z: 1.4347388}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2913058899239936669}

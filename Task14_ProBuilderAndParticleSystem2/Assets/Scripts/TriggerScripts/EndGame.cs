@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EndGame : MonoBehaviour
 {
+    // Если нужно остановить игру и подвести итог в конце уровня
     private ManagerForWinCanvasOnLastLevel _manager;
     private void OnTriggerEnter(Collider other)
     {
